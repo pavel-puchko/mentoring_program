@@ -1,0 +1,6 @@
+c:\users\pavel_puchko\documents\visual studio 2015\Projects\ImageResizerMentoring\ImageResizerMentoring\bin\Debug\ImageResizerMentoring.exe.config
+c:\users\pavel_puchko\documents\visual studio 2015\Projects\ImageResizerMentoring\ImageResizerMentoring\bin\Debug\ImageResizerMentoring.exe
+c:\users\pavel_puchko\documents\visual studio 2015\Projects\ImageResizerMentoring\ImageResizerMentoring\bin\Debug\ImageResizerMentoring.pdb
+c:\users\pavel_puchko\documents\visual studio 2015\Projects\ImageResizerMentoring\ImageResizerMentoring\bin\Debug\ImageProcessor.dll
+c:\users\pavel_puchko\documents\visual studio 2015\Projects\ImageResizerMentoring\ImageResizerMentoring\obj\Debug\ImageResizerMentoring.exe
+c:\users\pavel_puchko\documents\visual studio 2015\Projects\ImageResizerMentoring\ImageResizerMentoring\obj\Debug\ImageResizerMentoring.pdb

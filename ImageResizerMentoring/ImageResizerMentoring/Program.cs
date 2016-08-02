@@ -36,6 +36,7 @@ namespace ImageResizerMentoring
 				ThreadPool.QueueUserWorkItem((o) => {
 					string fileName = Path.GetFileName(path);
                     Image imgFromPath = get_image(fileName);
+
 					foreach (var size in ApplicationParams.imageSizes)
 					{
 						Image resizedImage = resize_image(imgFromPath, size);
@@ -66,7 +67,7 @@ namespace ImageResizerMentoring
 			ApplicationParams.imageSizes = ConfigurationManager.AppSettings["imageSizes"].Split(';');
 		}
 
-		String[] find_images(String path, String[] patterns)
+		string[] find_images(String path, String[] patterns)
 		{
 			var list = new List<string>();
 

@@ -1,0 +1,28 @@
+﻿@model WebThreads.Models.Options
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-6">
+		<form action="/Home/Index" method="post" class="resizer-form">
+			<div class="form-group">
+				<label for="InputFolderField">Input folder</label>
+				<input id="InputFolderField" class="form-control" type="text" name="InputFolder" value="@Model.InputFolder" />
+			</div>
+			<div class="form-group">
+				<label for="OutputFolderField">Output folder</label>
+				<input id="OutputFolderField"class="form-control" type="text"name="OutputFolder" value="@Model.OutputFolder" />
+			</div>
+			<div class="form-group">
+				<label for="SizesField">Sizes (ex. 200x200; 300x350)</label>
+				<input id="SizesField"class="form-control" type="text" name="Sizes" value="@Model.Sizes" />
+			</div>
+			<div class="form-group">
+				<label for="ThreadsNumberField">Threads Number</label>
+				<input id="ThreadsNumberField" class="form-control" type="number" name="ThreadsNumber" value="@Model.ThreadsNumber" />
+			</div>
+			<input class="form-control btn btn-info" type="submit" value="Run" />
+		</form>
+	</div>
+</div>

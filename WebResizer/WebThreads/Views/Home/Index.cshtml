@@ -22,7 +22,19 @@
 				<label for="ThreadsNumberField">Threads Number</label>
 				<input id="ThreadsNumberField" class="form-control" type="number" name="ThreadsNumber" value="@Model.ThreadsNumber" />
 			</div>
-			<input class="form-control btn btn-info" type="submit" value="Run" />
+			<div class="form-group col-md-3">
+				<input class="form-control btn btn-info col-md-3" type="submit" value="Run" />
+			</div>
+			<div class="form-group col-md-3">
+				<input id="stopButton" class="form-control btn btn-danger col-md-3" type="button" value="Stop" />
+			</div>
 		</form>
 	</div>
 </div>
+<script>
+	$('#stopButton').click(function () {
+		$.post('@Url.Action("StopResize", "Home")', function (data) {
+			alert(data);
+		});
+	})
+</script>

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Web;
+using Emgu.CV;
+using Emgu.CV.CvEnum;
+using Emgu.CV.Structure;
 
 namespace WebThreads.Services
 {
@@ -23,30 +24,21 @@ namespace WebThreads.Services
 
 			return list.ToArray();
 		}
-		public Image GetImage(string path, string folder)
-		{
-			using (FileStream stream = new FileStream(
-				Path.Combine(folder, path), FileMode.Open, FileAccess.Read)
-			)
-			{
-				Image img = Image.FromStream(stream);
 
-				return img;
-			}
-		}
-
-		public Image ResizeImage(Image img, string size)
+		public Image<Bgr, byte> ResizeImage(string path, string size)
 		{
 			var sizeXY = size.Split('x');
-			var new_img = new Bitmap(int.Parse(sizeXY[0]), int.Parse(sizeXY[1]));
-			Graphics.FromImage(new_img).DrawImage(img, 0, 0, new_img.Width, new_img.Height);
+			var width = int.Parse(sizeXY[0]);
+			var height = int.Parse(sizeXY[1]);
+            var image = new Image<Bgr, byte>(path);
+			var resizedImage = image.Resize(width, height, Inter.Cubic);
 
-			return new_img;
+			return resizedImage;
 		}
 
-		public void SaveImg(Image img, string saveTo)
+		public void SaveImg(Image<Bgr, byte> img, string saveToPath)
 		{
-			img.Save(saveTo);
+			img.Save(saveToPath);
 		}
 	}
 }

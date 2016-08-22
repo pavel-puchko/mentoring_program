@@ -18,8 +18,8 @@ namespace WebThreads.Controllers
 			Options options = new Options();
 
 			options.ThreadsNumber = 3;
-			options.InputFolder = "F:\\epammentoring\\tasks\\input";
-			options.OutputFolder = "F:\\epammentoring\\tasks\\output";
+			options.InputFolder = "C:\\Users\\Pavel_Puchko\\Documents\\mentoring_program\\in";
+			options.OutputFolder = "C:\\Users\\Pavel_Puchko\\Documents\\mentoring_program\\out";
 			options.Sizes = "200x200; 300x300";
 
             return View(options);

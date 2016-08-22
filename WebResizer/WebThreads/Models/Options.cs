@@ -7,7 +7,7 @@ namespace WebThreads.Models
 {
 	public class Options
 	{
-		public string InputFolder { get; set; }
+        public string InputFolder { get; set; }
 
 		public string OutputFolder { get; set; }
 

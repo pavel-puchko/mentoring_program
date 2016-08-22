@@ -11,3 +11,6 @@ F:\epammentoring\tasks\ImageResizerMentoring\ImageResizerMentoring\bin\Debug\Ima
 F:\epammentoring\tasks\ImageResizerMentoring\ImageResizerMentoring\bin\Debug\ImageResizerMentoring.pdb
 F:\epammentoring\tasks\ImageResizerMentoring\ImageResizerMentoring\bin\Debug\ImageProcessor.dll
 F:\epammentoring\tasks\ImageResizerMentoring\ImageResizerMentoring\obj\Debug\ImageResizerMentoring.csprojResolveAssemblyReference.cache
+C:\Users\Pavel_Puchko\Documents\mentoring_program\ImageResizerMentoring\ImageResizerMentoring\bin\Debug\ImageResizerMentoring.exe.config
+C:\Users\Pavel_Puchko\Documents\mentoring_program\ImageResizerMentoring\ImageResizerMentoring\obj\Debug\ImageResizerMentoring.exe
+C:\Users\Pavel_Puchko\Documents\mentoring_program\ImageResizerMentoring\ImageResizerMentoring\obj\Debug\ImageResizerMentoring.pdb

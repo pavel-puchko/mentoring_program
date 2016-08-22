@@ -12,19 +12,39 @@ namespace WebThreads.Services
 	{
 		private readonly ImageService _imageService;
 		private int _count;
+		private List<string> _processedFiles;
+		private static ThreadsResizer instance;
+		public static ThreadsResizer Instance
+		{
+			get
+			{
+				if (instance == null)
+				{
+					instance = new ThreadsResizer();
+				}
+				return instance;
+			}
+		}
 
 		public ThreadsResizer()
 		{
 			_imageService = new ImageService();
-		}
+			_processedFiles = new List<string>();
+        }
 
 		public void StopResizing()
 		{
 			Interlocked.Exchange(ref _count, 0);
 		}
 
+		public List<string> GetProcessedFiles()
+		{
+			return _processedFiles;
+		}
+
 		public void ThreadResize(Options options)
 		{
+			_processedFiles = new List<string>();
 			string[] Extensions = new string[] { "*.jpg", "*.jpeg", "*.png", "*.gif" };
 			string[] ImageSizes = options.Sizes.Split(';');
 			ThreadPool.SetMaxThreads(options.ThreadsNumber, options.ThreadsNumber);
@@ -48,6 +68,8 @@ namespace WebThreads.Services
 					{
 						_imageService.SaveImg(_imageService.ResizeImage(imagePath, size), Path.Combine(options.OutputFolder, size + "_" + FileName));
 					}
+
+					_processedFiles.Add(FileName);
 
 					if (Interlocked.Decrement(ref _count) <= 0)
 					{

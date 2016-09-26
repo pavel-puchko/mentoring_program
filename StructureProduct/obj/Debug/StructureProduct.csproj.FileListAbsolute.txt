@@ -1,5 +1,0 @@
-F:\epammentoring\tasks\StructureProduct\bin\Debug\StructureProduct.exe.config
-F:\epammentoring\tasks\StructureProduct\bin\Debug\StructureProduct.exe
-F:\epammentoring\tasks\StructureProduct\bin\Debug\StructureProduct.pdb
-F:\epammentoring\tasks\StructureProduct\obj\Debug\StructureProduct.exe
-F:\epammentoring\tasks\StructureProduct\obj\Debug\StructureProduct.pdb

@@ -1,6 +1,0 @@
-F:\epammentoring\tasks\InfoDataOptimization\bin\Debug\InfoDataOptimization.exe.config
-F:\epammentoring\tasks\InfoDataOptimization\bin\Debug\InfoDataOptimization.exe
-F:\epammentoring\tasks\InfoDataOptimization\bin\Debug\InfoDataOptimization.pdb
-F:\epammentoring\tasks\InfoDataOptimization\obj\Debug\InfoDataOptimization.csprojResolveAssemblyReference.cache
-F:\epammentoring\tasks\InfoDataOptimization\obj\Debug\InfoDataOptimization.exe
-F:\epammentoring\tasks\InfoDataOptimization\obj\Debug\InfoDataOptimization.pdb

@@ -14,11 +14,16 @@ namespace StructureProduct
 
 		struct Product
 		{
-			public string Name { get; set; }
+			public readonly string name;
+			public readonly int? count;
+			public readonly int price;
 
-			public float? Price { get; set; }
-
-			public int Count { get; set; }
+			public Product(string name, int? count, int price)
+			{
+				this.name = name;
+				this.count = count;
+				this.price = price;
+			}
 		}
 	}
 }

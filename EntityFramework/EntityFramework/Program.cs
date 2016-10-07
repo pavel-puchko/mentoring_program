@@ -10,15 +10,15 @@ namespace EntityFramework
 	{
 		static void Main(string[] args)
 		{
+
+		}
+		static void ordersSelect(string category)
+		{
 			using (var db = new Northwind())
 			{
-				var orders = (
-					from order in db.Orders
-					select order
-				).ToList();
-
-				Console.WriteLine("Press any key to exit...");
-				Console.ReadKey();
+				var orders = db.Orders
+					.Where(o => o.Order_Details.Any(d => d.Product.Category.CategoryName == category))
+					.ToList();
 			}
 		}
 	}
